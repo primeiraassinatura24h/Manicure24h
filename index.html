@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manicure que Edita | Transforme seu conteúdo</title>
+<meta name="description" content="Aprenda a gravar, editar e criar conteúdos profissionais pelo celular com o Manicure que Edita.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;background:#08070d;color:#fff;line-height:1.6;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(255,75,180,.18),transparent 28%),
+    radial-gradient(circle at 85% 25%,rgba(130,70,255,.16),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(255,70,150,.10),transparent 35%);
+}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:50;background:rgba(8,7,13,.72);
+  backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);
+}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:18px;letter-spacing:-.5px}
+.logo span{color:#ff55b8}
+.navbtn,.cta{
+  display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;
+  font-weight:800;border-radius:14px;transition:.25s;
+}
+.navbtn{padding:10px 17px;border:1px solid rgba(255,255,255,.13);font-size:13px}
+.cta{
+  padding:16px 24px;background:linear-gradient(135deg,#ff4fb4,#8b5cff);
+  box-shadow:0 12px 35px rgba(255,79,180,.22);border:1px solid rgba(255,255,255,.15);
+}
+.cta:hover,.navbtn:hover{transform:translateY(-3px)}
+.hero{padding:92px 0 70px;text-align:center;position:relative}
+.badge{
+  display:inline-block;padding:7px 13px;border-radius:99px;background:rgba(255,80,180,.09);
+  border:1px solid rgba(255,80,180,.25);color:#ff91d0;font-size:12px;font-weight:800;
+  letter-spacing:.5px;margin-bottom:22px;
+}
+h1{font-size:clamp(38px,7vw,76px);line-height:.98;letter-spacing:-3px;max-width:950px;margin:auto}
+.gradient{background:linear-gradient(90deg,#fff,#ff7ac6,#9e82ff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:24px auto;color:#bdb9c9;font-size:18px}
+.hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.secondary{background:rgba(255,255,255,.06);box-shadow:none;border:1px solid rgba(255,255,255,.12)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:55px}
+.stat{padding:18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.035)}
+.stat b{font-size:24px}.stat span{display:block;color:#aaa4b4;font-size:12px}
+section{padding:82px 0}
+.section-title{text-align:center;max-width:700px;margin:0 auto 42px}
+.kicker{color:#ff73c3;text-transform:uppercase;font-size:11px;font-weight:900;letter-spacing:2px}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:10px 0 14px;letter-spacing:-1.5px}
+.section-title p,.muted{color:#aaa5b4}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{
+  padding:27px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border:1px solid rgba(255,255,255,.09);transition:.3s;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,93,190,.35)}
+.icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(255,83,184,.12);font-size:20px;margin-bottom:18px}
+.card h3{font-size:18px;margin-bottom:8px}.card p{color:#aaa5b4;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.glass{
+  padding:35px;border:1px solid rgba(255,255,255,.09);border-radius:28px;
+  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+}
+.list{list-style:none;margin-top:22px}.list li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#c6c1cd}
+.list li:before{content:"✓";color:#ff6cbe;font-weight:900;margin-right:10px}
+.audience{display:grid;gap:12px}.aud{padding:20px;border-radius:18px;background:#0e0c15;border:1px solid rgba(255,255,255,.08)}
+.offer{text-align:center;position:relative;overflow:hidden}
+.offer:after{content:"";position:absolute;width:260px;height:260px;background:#ff4fb4;filter:blur(110px);opacity:.12;top:-130px;right:-80px}
+.old{text-decoration:line-through;color:#777;font-size:17px}
+.price{font-size:58px;font-weight:950;line-height:1;margin:10px 0}
+.price small{font-size:17px;color:#aaa}
+.installment{color:#c8c3cf;margin-bottom:23px}
+.author{display:grid;grid-template-columns:180px 1fr;gap:30px;align-items:center}
+.avatar{
+  height:180px;border-radius:28px;background:linear-gradient(145deg,#ff55b8,#765cff);
+  display:grid;place-items:center;font-size:56px;font-weight:900;
+}
+.author p{color:#aaa5b4;margin-top:12px}
+.faq{max-width:800px;margin:auto}.faq details{border-bottom:1px solid rgba(255,255,255,.1);padding:19px 0}
+.faq summary{cursor:pointer;font-weight:800}.faq p{color:#aaa5b4;padding:13px 0 3px}
+.final{padding:90px 0;text-align:center}
+footer{padding:30px 0;text-align:center;color:#777;font-size:12px;border-top:1px solid rgba(255,255,255,.08)}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:760px){
+  .navbtn{display:none}.hero{padding-top:65px}
+  .stats,.grid,.split{grid-template-columns:1fr}
+  .author{grid-template-columns:1fr}.avatar{height:140px}
+  section{padding:60px 0}.price{font-size:48px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <div class="logo">MANICURE <span>QUE EDITA</span></div>
+    <a class="navbtn" href="#oferta">Quero começar</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="badge">PACOTE CRIATIVO • 100% PELO CELULAR</div>
+    <h1>Seu conteúdo pode parecer <span class="gradient">muito mais profissional.</span></h1>
+    <p>Aprenda a gravar e editar seus conteúdos de um jeito simples, direto e sem precisar de computador ou equipamentos caros.</p>
+    <div class="hero-buttons">
+      <a class="cta" href="#oferta">Quero garantir minha vaga →</a>
+      <a class="cta secondary" href="#conteudo">Ver o que vou aprender</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>📱</b><span>Feito para celular</span></div>
+      <div class="stat"><b>⚡</b><span>Aulas práticas e diretas</span></div>
+      <div class="stat"><b>✦</b><span>Conteúdo para manicures</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">Mais que edição</div>
+      <h2>Crie conteúdo que mostra o valor do seu trabalho.</h2>
+      <p>Você não precisa passar horas tentando descobrir cada função de um aplicativo. Aprenda um processo mais simples para gravar, editar e postar.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="icon">⏱</div><h3>Economize tempo</h3><p>Aprenda a editar de forma mais organizada e encontre ferramentas que realmente ajudam no processo.</p></div>
+      <div class="card reveal"><div class="icon">✦</div><h3>Mais profissionalismo</h3><p>Melhore a apresentação dos seus trabalhos e passe mais segurança para quem acompanha seu perfil.</p></div>
+      <div class="card reveal"><div class="icon">🚀</div><h3>Mais consistência</h3><p>Tenha mais facilidade para produzir conteúdos e manter sua presença na internet.</p></div>
+      <div class="card reveal"><div class="icon">💡</div><h3>Mais criatividade</h3><p>Tenha novas ideias para Reels, fotos e outros conteúdos para mostrar seu trabalho.</p></div>
+      <div class="card reveal"><div class="icon">📲</div><h3>Tudo pelo celular</h3><p>Faça suas edições sem depender de computador ou tablet caro.</p></div>
+      <div class="card reveal"><div class="icon">🎯</div><h3>Posicionamento</h3><p>Aprenda a apresentar melhor seu trabalho e construir uma imagem profissional na internet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="conteudo">
+  <div class="container split">
+    <div class="reveal">
+      <div class="kicker">O que você vai encontrar</div>
+      <h2>Aprenda fazendo.</h2>
+      <p class="muted">Um conteúdo pensado para sair da teoria e colocar a mão na massa.</p>
+      <ul class="list">
+        <li>Aulas práticas e direto ao ponto</li>
+        <li>Edição de fotos para o feed</li>
+        <li>Como posicionar suas gravações</li>
+        <li>Transmissão de tela para tela</li>
+        <li>Edição de Reels</li>
+        <li>Fontes e recursos diferentes</li>
+        <li>Edição do zero pelo telefone</li>
+        <li>Lista de materiais e ferramentas úteis</li>
+      </ul>
+    </div>
+    <div class="glass reveal">
+      <div class="kicker">Sem complicação</div>
+      <h2>Chega de ficar perdida no aplicativo.</h2>
+      <p class="muted">Você vai conhecer técnicas para gravar e editar melhor, entendendo o que fazer em cada etapa.</p>
+      <br>
+      <a class="cta" href="#oferta">Quero aprender →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">É para você?</div>
+      <h2>Quem pode aproveitar o Manicure que Edita?</h2>
+    </div>
+    <div class="audience">
+      <div class="aud reveal"><b>01 — Manicures iniciantes</b><br><span class="muted">Nunca editou e quer começar do zero.</span></div>
+      <div class="aud reveal"><b>02 — Manicures que já editam</b><br><span class="muted">Já criam conteúdo, mas sentem falta de criatividade e organização.</span></div>
+      <div class="aud reveal"><b>03 — Instrutoras</b><br><span class="muted">Querem começar um curso online ou modernizar seus conteúdos.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="container">
+    <div class="glass offer reveal">
+      <div class="kicker">Oferta especial</div>
+      <h2>Transforme a forma como você cria conteúdo.</h2>
+      <p class="muted">Tenha acesso ao treinamento e aprenda a editar pelo celular de maneira prática.</p>
+      <br>
+      <div class="old">De R$ 597,00</div>
+      <div class="price">R$ 397<small>,00 à vista</small></div>
+      <div class="installment">ou 12x de R$ 41,06</div>
+      <!-- TROQUE O # PELO LINK REAL DE CHECKOUT -->
+      <a class="cta" href="https://pay.kiwify.com.br/B0yBtex?afid=P651pAUp">Garantir minha vaga →</a>
+      <p style="margin-top:15px;font-size:11px;color:#777">Pagamento e acesso conforme as condições apresentadas na página de checkout.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="glass author reveal">
+      <div class="avatar">MJ</div>
+      <div>
+        <div class="kicker">Quem está por trás</div>
+        <h2>Melissa Jung</h2>
+        <p>Melissa começou em 2017, usando um simples iPhone e uma pilha de livros como apoio para suas gravações. Com o tempo, estudou aplicativos, testou diferentes formas de edição e criou mais de 30 cursos online.</p>
+        <p>O Manicure que Edita nasceu dessa experiência: ensinar outras profissionais a lidar com a criação de conteúdo de forma mais simples, prática e sem complicação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Preciso ter computador?</summary><p>Não. A proposta é ensinar o processo usando o celular.</p></details>
+      <details><summary>Preciso saber editar antes?</summary><p>Não. O conteúdo também foi pensado para quem está começando do zero.</p></details>
+      <details><summary>É somente para manicures?</summary><p>O treinamento foi desenvolvido com foco em manicures e instrutoras que querem melhorar seus conteúdos.</p></details>
+      <details><summary>Vou aprender a fazer Reels?</summary><p>Sim. A oferta inclui conteúdo de edição de Reels e outros formatos para redes sociais.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container reveal">
+    <div class="kicker">Seu próximo conteúdo começa aqui</div>
+    <h2>Pronta para editar com mais segurança?</h2>
+    <p class="muted" style="max-width:580px;margin:0 auto 25px">Aprenda um processo mais simples para criar conteúdos e mostrar seu trabalho na internet.</p>
+    <a class="cta" href="#oferta">Garantir minha vaga →</a>
+  </div>
+</section>
+
+<footer>© 2025 Manicure que Edita. Todos os direitos reservados.</footer>
+
+<script>
+const items=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.12});
+items.forEach(i=>observer.observe(i));
+</script>
+</body>
+</html>
